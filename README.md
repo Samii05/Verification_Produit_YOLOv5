@@ -18,7 +18,10 @@ No-Label : Absence d'étiquette
 
 Bottle : Bouteille détectée
 
-Le modèle a été entraîné sur un dataset disponible sur Roboflow : Lien vers le dataset.
+
+Le modèle a été entraîné sur un dataset disponible sur Roboflow
+
+
 
 Fonctionnalités Principales
 
@@ -36,14 +39,19 @@ Affichage des Résultats : Visualisation des détections avec mise en évidence 
 
 Enregistrement des Analyses : Sauvegarde des résultats pour suivi et exploitation.
 
+
+
 Organisation du Projet
 
 📂 Verification_Produit_YOLOv5/
-│── 📁 dataset/            # Contient les images et annotations du dataset
-│── 📁 models/             # Contient les meilleurs modèles entrainés (best.pt)
-│── 📁 notebooks/          # Codes du projet
-│── 📁 diagrams/           # résultat d'évaluation de projet
-│── 📄 README.md           # Documentation du projet
+│── 📁 dataset/          # Contient le dataset original de Roboflow et les nouvelles images annotées pour les deux fine-tunings
+│── 📁 models/           # Contient les modèles YOLOv5 : modèle initial(bestoriginal.pt), après le premier fine-tuning(best1stFT),après le deuxième fine-tuning (best.pt)
+│── 📁 notebooks/        # Contient les notebooks : (entraînement,fine-tuning, évaluation), interfaces (Gradio) et interface (Tkinter)
+│── 📁 demointerfaces/   # Démo de l'utilisation des interfaces Gradio et Tkinter leur diagrammes de séquence 
+│── 📁 results/          # Contient les graphiques d'évaluation du deuxième fine-tuning (matrice de confusion, courbe PR, etc.)
+│── 📄 README.md         # Documentation du projet
+
+
 
 
 Déroulement de l'Entraînement et Fine-Tuning
@@ -60,15 +68,7 @@ Deuxième Fine-Tuning : Ajout de nouvelles données pour un dernier ajustement.
 
 Evaluation Finale : Analyse de la matrice de confusion et de la courbe PR pour évaluer les performances.
 
-Liens Utiles
 
-Notebook Colab d'Entraînement : Lien
-
-Notebook Colab de l'Interface Web (Gradio) : Lien
-
-Notebook Jupyter de l'Interface Desktop (Tkinter) : Lien
-
-"""" veuillez les trouver dans le dossier notebooks et les télécharger """
 
 
 
@@ -76,7 +76,7 @@ Utilisation
 
 Utilisation de l'interface
 
-Ce projet propose une interface permettant d'exécuter un modèle YOLOv5 (best.pt) avec Tkinter (localement) et  (en ligne).
+Ce projet propose une interface permettant d'exécuter un modèle YOLOv5 (best.pt) avec Tkinter (localement) et Gradio (en ligne).
 Suivez les étapes ci-dessous pour exécuter l'interface selon votre environnement.
 
 
@@ -89,7 +89,7 @@ créer un notebook jupyter
 
 Bibliothèques requises : torch, tkinter, PIL
 
-Modèle best.pt placé dans le même dossier que le script
+Modèle best.pt placé dans le même dossier que le notebook
 
 🚀 Étapes :
 
