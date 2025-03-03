@@ -45,7 +45,7 @@ Organisation du Projet
 
 📂 Verification_Produit_YOLOv5/
 │── 📁 dataset/          # Contient le dataset original de Roboflow et les nouvelles images annotées pour les deux fine-tunings
-│── 📁 models/           # Contient les modèles YOLOv5 : modèle initial(bestoriginal.pt), après le premier fine-tuning(best1stFT),après le deuxième fine-tuning (best.pt)
+│── 📁 models/           # Contient les modèles YOLOv5 : modèle initial(bestoriginal.pt), après le premier fine-tuning(best1stFT.pt), après le deuxième fine-tuning (best.pt)
 │── 📁 notebooks/        # Contient les notebooks : (entraînement,fine-tuning, évaluation), interfaces (Gradio) et interface (Tkinter)
 │── 📁 demointerfaces/   # Démo de l'utilisation des interfaces Gradio et Tkinter leur diagrammes de séquence 
 │── 📁 results/          # Contient les graphiques d'évaluation du deuxième fine-tuning (matrice de confusion, courbe PR, etc.)
